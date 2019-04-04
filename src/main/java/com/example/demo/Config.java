@@ -57,33 +57,33 @@ public class Config extends WebMvcConfigurerAdapter {
     }
 
 
-    @Bean
-    public ViewResolver viewResolver() {
-        ThymeleafViewResolver viewResolver=new ThymeleafViewResolver();
-        viewResolver.setTemplateEngine(templateEngine());
-        viewResolver.setCharacterEncoding("UTF-8");
-        return viewResolver;
-    }
-
-
-    @Bean
-    public ISpringTemplateEngine templateEngine() {
-        SpringTemplateEngine templateEngine=new SpringTemplateEngine();
-        templateEngine.setTemplateResolver(templateResolver());
-        templateEngine.addDialect(new LayoutDialect());
-        return templateEngine;
-    }
-
-
-    private ITemplateResolver templateResolver() {
-        SpringResourceTemplateResolver templateResolver=new SpringResourceTemplateResolver();
-        templateResolver.setPrefix("classpath:/templates");
-        templateResolver.setSuffix(".html");
-        templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding(CHARACTER_ENCODING_UTF_8);
-        templateResolver.setCacheable(false);
-        return templateResolver;
-    }
+//    @Bean
+//    public ViewResolver viewResolver() {
+//        ThymeleafViewResolver viewResolver=new ThymeleafViewResolver();
+//        viewResolver.setTemplateEngine(customerTemplateEngine());
+//        viewResolver.setCharacterEncoding("UTF-8");
+//        return viewResolver;
+//    }
+//
+//
+//    @Bean
+//    public ISpringTemplateEngine customerTemplateEngine() {
+//        SpringTemplateEngine templateEngine=new SpringTemplateEngine();
+//        templateEngine.setTemplateResolver(templateResolver());
+//        templateEngine.addDialect(new LayoutDialect());
+//        return templateEngine;
+//    }
+//
+//
+//    private ITemplateResolver templateResolver() {
+//        SpringResourceTemplateResolver templateResolver=new SpringResourceTemplateResolver();
+//        templateResolver.setPrefix("classpath:/templates");
+//        templateResolver.setSuffix(".html");
+//        templateResolver.setTemplateMode(TemplateMode.HTML);
+//        templateResolver.setCharacterEncoding(CHARACTER_ENCODING_UTF_8);
+//        templateResolver.setCacheable(false);
+//        return templateResolver;
+//    }
 
     /**
      * Configure ViewResolvers to deliver preferred views.
