@@ -10,12 +10,12 @@ public class DemoController {
     @GetMapping({"/", "index"})
     public String index() {
 
-        return "index";
+        return "/index";
     }
 
     @GetMapping("/detail")
     public String viewRetailerAuthorityDetail() {
 
-        return "blog";
+        return "/blog";
     }
 }
